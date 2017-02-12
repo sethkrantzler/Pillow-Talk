@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pillow Talk</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="pillowTalkStyle.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="homeCtrl.js" type="text/javascript" charset="utf8"></script>
+
+  </head>
+  <body ng-controller="homeCtrl">
+    <!-- Navbar !-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-bed"> PillowTalk</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Setting Up the Main Page !-->
+
+      <div class="col-md-7">
+        <div ng-if = "graphShow" class="col-xs-12 graphs">
+          <img style ="width:100%" class ="img-responsive" src="https://www.sleepcycle.com/wp-content/uploads/2016/06/sleepcycle_regular_sleep.png">
+        </div>
+        <div ng-if = "!graphShow" class="col-xs-12 graphs">
+          <div class="col-xs-12 sleepTips">
+            <h4>Here are some ways to improve your sleep:</h4>
+            <h3>Before Bed</h3>
+            <li>Don’t use your cellphone or other electronics for an hour before going to sleep
+            <li>Go to bed and wake up around the same time every day
+            <li>Try not to eat a big meal to close to sleeping
+            <li>Dim the lights around your home in the hours leading up to sleep
+            <li>Try to clear your mind of all the day’s stresses in the hours leading up to sleep
+            <h3>During the Day</h3>
+            <li>If you have to nap, try to keep them under twenty minutes
+            <li>Try not to drink any caffeinated drinks after the morning
+            <li>Exercise for around an hour during the day
+            <div class="col-xs-12" style="height:40px"></div>
+          </div>
+        </div>
+        <div class="col-xs-12" style="height:10px"></div>
+        <div class="col-xs-8 col-xs-offset-2">
+          <button type="button" class="btn btn-info sleepTipsBtn" ng-show="graphShow" ng-click="graphShow = false;"><span class="glyphicon glyphicon-education tipsGlyph"></span>Sleep Tips</button>
+          <button type="button" class="btn btn-info sleepTipsBtn" ng-show="!graphShow" ng-click="graphShow = true;"><span class="glyphicon glyphicon-stats tipsGlyph"></span>Sleep Graphs</button>
+        </div>
+      </div>
+
+      <div class="col-xs-5">
+        <div class="col-xs-12 stat">
+
+          <h1>Statistics</h1>
+
+          <div class="col-xs-12 subStat">
+            <h3>Overview</h3>
+            <hr class="underLine">
+            <p ng-bind="statisticsArr[index].hours"></p>
+            <p ng-bind="statisticsArr[index].bedtime"></p>
+            <p ng-bind="statisticsArr[index].wakeup"></p>
+          </div>
+          <div class="col-xs-12 subStat">
+            <h3>Quality</h3>
+            <hr class="underLine">
+            <p ng-bind="statisticsArr[index].awake"></p>
+            <p ng-bind="statisticsArr[index].restless"></p>
+            <p ng-bind="statisticsArr[index].percent"></p>
+          </div>
+          <div class="col-xs-12 subStat">
+            <h3>Activity</h3>
+            <hr class="underLine">
+            <p ng-bind="statisticsArr[index].steps"></p>
+            <p ng-bind="statisticsArr[index].calories"></p>
+            <p ng-bind="statisticsArr[index].stairs"></p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+  </body>
+</html>

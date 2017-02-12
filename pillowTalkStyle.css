@@ -1,0 +1,47 @@
+body{
+  background: linear-gradient(#0f0128, rgb(44, 3, 86));
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+.navbar-default{
+  background-color: rgba(93, 251, 224, 0.33);
+  border-color: rgba(50, 50, 50, 0.21);
+}
+.glyphicon{
+  color: #2bfff3;
+}
+.sleepTipsBtn{
+  width:100%;
+  background-color: rgba(93, 251, 224, 0.33);
+  border-color: transparent;
+  font-size: 18px;
+}
+.tipsGlyph{
+  position: relative;
+  left: -10px;
+}
+.sleepTips{
+  border-radius: 10px;
+  background-color: white;
+  color: #030141;
+}
+.stat{
+  background-color: #1e2b35;
+  border-radius: 10px;
+}
+.subStat{
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+.underLine{
+  margin: 0px;
+  margin-bottom: 5px;
+  border-top: 2px solid #030141;
+}
+h1{
+  color: #2bfff3;
+}
+h3{
+  color: #030141;
+}
