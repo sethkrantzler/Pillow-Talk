@@ -10,6 +10,17 @@ body{
 .glyphicon{
   color: #2bfff3;
 }
+.graphs{
+  text-align: center;
+}
+.graphs h1{
+  position: relative;
+  top: -480px;
+  margin-bottom: 0px;
+  magin-top: 0px;
+  z-index: 10;
+  font-size: 20px;
+}
 .sleepTipsBtn{
   width:100%;
   background-color: rgba(93, 251, 224, 0.33);
@@ -23,6 +34,7 @@ body{
 .sleepTips{
   border-radius: 10px;
   background-color: white;
+  text-align: left;
   color: #030141;
 }
 .stat{
