@@ -3,7 +3,14 @@ body{
   font-family: 'Open Sans', sans-serif;
   color: black;
 }
-
+.btn-info:active {
+  color: black;
+  background-color: white;
+}
+.btn-info:focus {
+  color: black;
+  background-color: white;
+}
 .navbar-default{
   background-color: rgba(93, 251, 224, 0.33);
   border-color: rgba(50, 50, 50, 0.21);
