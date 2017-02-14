@@ -29,7 +29,18 @@
 
       <div class="col-md-7 graphs">
         <div ng-if = "graphShow" class="col-xs-12">
-          <img style ="width:100%" class ="img-responsive" src="https://www.sleepcycle.com/wp-content/uploads/2016/06/sleepcycle_regular_sleep.png">
+          <div>
+            <button type="button" class="btn btninfo dayweekmonthbtn" ng-click="index = 0;">Day</button>
+            <button type="button" class="btn btninfo dayweekmonthbtn" ng-click="index = 1;">Week</button>
+            <button type="button" class="btn btninfo dayweekmonthbtn" ng-click="index = 2;">Month</button>
+            <button type="button" class="btn btninfo typegraph" ng-click="subindex = 0;">Hours</button>
+            <button type="button" class="btn btninfo typegraph" ng-click="subindex = 1;">Quality</button>
+            <button type="button" class="btn btninfo typegraph"ng-click="subindex = 2;">Bedtime/Wakeup</button>
+          </div>
+
+
+          <img style ="width:100%" class ="img-responsive" ng-src="{{grapharray[index][subindex]}}">
+          <!--<img style ="width:100%" class ="img-responsive" src="https://www.sleepcycle.com/wp-content/uploads/2016/06/sleepcycle_regular_sleep.png"> -->
         </div>
         <h1>Last Night's Sleep</h1>
         <div ng-if = "!graphShow" class="col-xs-12">
