@@ -17,6 +17,13 @@ body{
 .qualityButtons {
   float: right;
 }
+.on {
+  color: black;
+  background-color: white;
+}
+.off {
+
+}
 .navbar-default{
   background-color: rgba(93, 251, 224, 0.33);
   border-color: rgba(50, 50, 50, 0.21);

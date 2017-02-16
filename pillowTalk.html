@@ -31,14 +31,14 @@
         <div ng-if = "graphShow" class="col-xs-12">
           <div>
             <div class="dateButtons">
-              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(0)">Day</button>
-              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(1)">Week</button>
-              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(2)">Month</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(0)" ng-class="{0:'on', 1:'off', 2:'off'}[index]">Day</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(1)" ng-class="{0:'off', 1:'on', 2:'off'}[index]">Week</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(2)" ng-class="{0:'off', 1:'off', 2:'on'}[index]">Month</button>
             </div>
             <div class="qualityButtons">
-              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(0)" ng-disabled="index==0">Hours</button>
-              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(1)" >Quality</button>
-              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(2)" ng-disabled="index==0">Bedtime/Wakeup</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(0)" ng-disabled="index==0" ng-class="{0:'on', 1:'off', 2:'off'}[subIndex]">Hours</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(1)" ng-class="{0:'off', 1:'on', 2:'off'}[subIndex]" >Quality</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(2)" ng-disabled="index==0" ng-class="{0:'off', 1:'off', 2:'on'}[subIndex]">Bedtime/Wakeup</button>
             </div>
           </div>
 

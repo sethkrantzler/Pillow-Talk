@@ -5,7 +5,7 @@ app.controller('homeCtrl', function ($scope) {
   $scope.statisticsArr = [];
   $scope.graphShow = true;
   $scope.index = 0;
-  $scope.subIndex = 0;
+  $scope.subIndex = 1;
   $scope.dailyGraphs = ['https://www.sleepcycle.com/wp-content/uploads/2016/06/sleepcycle_regular_sleep.png', 'http://i.imgur.com/lxAaB6c.jpg','http://i.imgur.com/duQ1FOl.jpg'];
   $scope.weeklyGraphs = ['http://i.imgur.com/qbMBkXL.jpg', 'http://i.imgur.com/vdNAGns.jpg', 'http://i.imgur.com/xpmJRIF.jpg'];
   $scope.monthlyGraphs = ['http://i.imgur.com/BjRG9nl.png', 'http://i.imgur.com/MgBOuoC.jpg', 'http://i.imgur.com/sjMg4Zd.jpg'];
