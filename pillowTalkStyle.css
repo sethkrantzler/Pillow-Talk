@@ -3,6 +3,11 @@ body{
   font-family: 'Open Sans', sans-serif;
   color: black;
 }
+.logo{
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .btn-info:active {
   color: black;
   background-color: white;
@@ -13,9 +18,15 @@ body{
 }
 .dateButtons {
   float: left;
+  margin-left: 5px;
+}
+.graphButtons{
+  position: relative;
+  top: 40px;
 }
 .qualityButtons {
   float: right;
+  margin-right: 5px;
 }
 .on {
   color: black;

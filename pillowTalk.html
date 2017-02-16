@@ -19,7 +19,10 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <span class="glyphicon glyphicon-bed"> PillowTalk</span>
+            <span class="glyphicon glyphicon-bed logo"></span>
+          </a>
+          <a class="navbar-brand" href="#">
+            <span><h1 class="logo">Pillow Talk</h1></span>
           </a>
         </div>
       </div>
@@ -29,15 +32,15 @@
 
       <div class="col-md-7 graphs">
         <div ng-if = "graphShow" class="col-xs-12">
-          <div>
+          <div class = "graphButtons">
             <div class="dateButtons">
               <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(0);changeSubIndex(1)" ng-class="{0:'on', 1:'off', 2:'off'}[index]">Day</button>
               <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(1)" ng-class="{0:'off', 1:'on', 2:'off'}[index]">Week</button>
               <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(2)" ng-class="{0:'off', 1:'off', 2:'on'}[index]">Month</button>
             </div>
             <div class="qualityButtons">
-              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(0)" ng-disabled="index==0" ng-class="{0:'on', 1:'off', 2:'off'}[subIndex]">Hours</button>
               <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(1)" ng-class="{0:'off', 1:'on', 2:'off'}[subIndex]" >Quality</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(0)" ng-disabled="index==0" ng-class="{0:'on', 1:'off', 2:'off'}[subIndex]">Hours</button>
               <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(2)" ng-disabled="index==0" ng-class="{0:'off', 1:'off', 2:'on'}[subIndex]">Bedtime/Wakeup</button>
             </div>
           </div>
@@ -64,6 +67,7 @@
           </div>
           <div class="col-xs-12" style="height:10px"></div>
         </div>
+        <div class="col-xs-12" style="height:5px"></div>
         <div class="col-xs-8 col-xs-offset-2">
           <button type="button" role="button" class="btn btn-info sleepTipsBtn" ng-show="graphShow" ng-click="graphShow = false;"><span class="glyphicon glyphicon-education tipsGlyph"></span>Sleep Tips</button>
           <button type="button" role="button" class="btn btn-info sleepTipsBtn" ng-show="!graphShow" ng-click="graphShow = true;"><span class="glyphicon glyphicon-stats tipsGlyph"></span>Sleep Graphs</button>
@@ -99,6 +103,8 @@
         </div>
 
       </div>
+
+      <div class="col-xs-12" style="height:20px"></div>
 
 
 

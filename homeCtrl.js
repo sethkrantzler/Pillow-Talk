@@ -7,8 +7,8 @@ app.controller('homeCtrl', function ($scope) {
   $scope.index = 0;
   $scope.subIndex = 1;
   $scope.dailyGraphs = ['http://i.imgur.com/lxAaB6c.jpg','https://www.sleepcycle.com/wp-content/uploads/2016/06/sleepcycle_regular_sleep.png', 'http://i.imgur.com/duQ1FOl.jpg'];
-  $scope.weeklyGraphs = ['http://i.imgur.com/s0hu1fj.png', 'http://i.imgur.com/vdNAGns.jpg', 'http://i.imgur.com/xpmJRIF.jpg'];
-  $scope.monthlyGraphs = ['http://i.imgur.com/xqGBYzX.png', 'http://i.imgur.com/MgBOuoC.jpg', 'http://i.imgur.com/sjMg4Zd.jpg'];
+  $scope.weeklyGraphs = ['http://i.imgur.com/s0hu1fj.png', '/qualityWeek.png', '/bedtimeWeekly.png'];
+  $scope.monthlyGraphs = ['http://i.imgur.com/xqGBYzX.png', '/qualityMonth.png', '/bedtimeMonthly.png'];
   $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs];
 
 
@@ -39,7 +39,7 @@ app.controller('homeCtrl', function ($scope) {
   $scope.monthlyStats = {
     hours: "Avg Hours: 6.5",
     bedtime: "Avg Bedtime: 12:36 PM",
-    wakeup: "Wake Up: 6:35 AM",
+    wakeup: "Avg Wake Up: 6:35 AM",
     awake: "Avg Awake: (4, 20 Mins)",
     restless: "Avg Restless: (2, 2 Mins)",
     percent: "Avg Percent Asleep: 80%",
