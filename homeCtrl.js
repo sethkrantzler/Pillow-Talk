@@ -7,8 +7,8 @@ app.controller('homeCtrl', function ($scope) {
   $scope.index = 0;
   $scope.subIndex = 1;
   $scope.dailyGraphs = ['http://i.imgur.com/lxAaB6c.jpg','https://www.sleepcycle.com/wp-content/uploads/2016/06/sleepcycle_regular_sleep.png', 'http://i.imgur.com/duQ1FOl.jpg'];
-  $scope.weeklyGraphs = ['http://i.imgur.com/s0hu1fj.png', '/qualityWeek.png', '/bedtimeWeekly.png'];
-  $scope.monthlyGraphs = ['http://i.imgur.com/xqGBYzX.png', '/qualityMonth.png', '/bedtimeMonthly.png'];
+  $scope.weeklyGraphs = ['http://i.imgur.com/s0hu1fj.png', 'qualityWeek.png', 'bedtimeWeekly.png'];
+  $scope.monthlyGraphs = ['http://i.imgur.com/xqGBYzX.png', 'qualityMonth.png', 'bedtimeMonthly.png'];
   $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs];
 
 
