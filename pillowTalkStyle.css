@@ -4,11 +4,13 @@ body{
   color: black;
 }
 .myTooltip {
+  margin-right: 0px;
   position: relative;
   color: transparent;
-  top:-69px;
-  left: -47px;
-  width: 10px;
+  top:-449px;
+  left: -51px;
+  width: 31px;
+  height: 400px;
   opacity: 1;
   z-index: 1000;
 }
@@ -23,7 +25,7 @@ body{
   background-color: rgba(0,0,0,.7);
   height: 20px;
   left: 37px;
-  top: -80px;
+  top: 200px;
   color: grey;
   padding: 0 5px;
   z-index: 1000;
