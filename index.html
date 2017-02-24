@@ -71,7 +71,13 @@
         <div class="col-xs-8 col-xs-offset-2">
           <button type="button" role="button" class="btn btn-info sleepTipsBtn" ng-show="graphShow" ng-click="graphShow = false;"><span class="glyphicon glyphicon-education tipsGlyph"></span>Sleep Tips</button>
           <button type="button" role="button" class="btn btn-info sleepTipsBtn" ng-show="!graphShow" ng-click="graphShow = true;"><span class="glyphicon glyphicon-stats tipsGlyph"></span>Sleep Graphs</button>
+          <div ng-if="index!=0" class="myTooltip">
+            Hey
+            <span ng-bind="labels[index][0]">Sunday</span>
+          </div>
         </div>
+
+
       </div>
 
       <div class="col-xs-5">

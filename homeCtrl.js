@@ -6,10 +6,11 @@ app.controller('homeCtrl', function ($scope) {
   $scope.graphShow = true;
   $scope.index = 0;
   $scope.subIndex = 1;
-  $scope.dailyGraphs = ['http://i.imgur.com/lxAaB6c.jpg', 'qualityDay.png', 'http://i.imgur.com/duQ1FOl.jpg'];
-  $scope.weeklyGraphs = ['hoursWeek.png', 'qualityWeek.png', 'bedtimeWeekly.png'];
-  $scope.monthlyGraphs = ['hoursMonth.png', 'qualityMonth.png', 'bedtimeMonthly.png'];
+  $scope.dailyGraphs = ['', 'dayQuality.png', ''];
+  $scope.weeklyGraphs = ['weekHours.png', 'weekQuality.png', 'bedtimeWeekly.png'];
+  $scope.monthlyGraphs = ['monthHours.png', 'monthQuality.png', 'bedtimeMonthly.png'];
   $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs];
+  $scope.labels = [null,["1/21"],["1/4"]]
 
 
   $scope.dailyStats = {
