@@ -9,7 +9,7 @@ app.controller('homeCtrl', function ($scope) {
   $scope.dailyGraphs = ['', 'dayQuality.png', ''];
   $scope.weeklyGraphs = ['weekHours.png', 'weekQuality.png', 'bedtimeWeekly.png'];
   $scope.monthlyGraphs = ['monthHours.png', 'monthQuality.png', 'bedtimeMonthly.png'];
-  $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs, $scope.sundayGraphs, $scope.mondayGraphs, $scope.tuesdayGraphs, $scope.wednesdayGraphs, $scope.thursdayGraphs, $scope.fridayGraphs, $scope.saturdayGraphs];
+  $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs, $scope.sundayGraphs, $scope.mondayGraphs, $scope.tuesdayGraphs, $scope.wednesdayGraphs, $scope.thursdayGraphs, $scope.fridayGraphs, $scope.dailyGraphs];
   $scope.labels = ["1/21","1/22", "1/23", "1/24", "1/25", "1/26", "1/27"];
 
 
