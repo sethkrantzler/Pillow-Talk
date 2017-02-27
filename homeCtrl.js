@@ -9,8 +9,8 @@ app.controller('homeCtrl', function ($scope) {
   $scope.dailyGraphs = ['', 'dayQuality.png', ''];
   $scope.weeklyGraphs = ['weekHours.png', 'weekQuality.png', 'bedtimeWeekly.png'];
   $scope.monthlyGraphs = ['monthHours.png', 'monthQuality.png', 'bedtimeMonthly.png'];
-  $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs];
-  $scope.labels = [null,["1/21"],["1/4"]]
+  $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs, $scope.sundayGraphs, $scope.mondayGraphs, $scope.tuesdayGraphs, $scope.wednesdayGraphs, $scope.thursdayGraphs, $scope.fridayGraphs, $scope.saturdayGraphs];
+  $scope.labels = ["1/21","1/22", "1/23", "1/24", "1/25", "1/26", "1/27"];
 
 
   $scope.dailyStats = {
@@ -49,10 +49,6 @@ app.controller('homeCtrl', function ($scope) {
     stairs: "Avg Stairs: 17 Flights",
   };
 
-  $scope.statisticsArr.push($scope.dailyStats);
-  $scope.statisticsArr.push($scope.weeklyStats);
-  $scope.statisticsArr.push($scope.monthlyStats);
-
   $scope.changeIndex = function(num){
     $scope.index = num;
   }
@@ -60,6 +56,34 @@ app.controller('homeCtrl', function ($scope) {
   $scope.changeSubIndex = function(num){
     $scope.subIndex = num;
   }
+
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+
+  $scope.randomData = function(){
+    $scope.statisticsArr.push($scope.dailyStats);
+    $scope.statisticsArr.push($scope.weeklyStats);
+    $scope.statisticsArr.push($scope.monthlyStats);
+    for (var i = 0; i < 7; i++){
+      $scope.newObj = {};
+      $scope.newObj.hours =  "Total Hours: " + getRandomIntInclusive(4, 9).toString();
+      $scope.newObj.bedtime = "Bedtime: " + getRandomIntInclusive(8, 12).toString() + ":" + getRandomIntInclusive(0, 60).toString() + " PM";
+      $scope.newObj.wakeup = "Wake Up: " + getRandomIntInclusive(5, 9).toString() + ":" + getRandomIntInclusive(0, 60).toString() + " AM";
+      $scope.newObj.awake = "Awake: (" + getRandomIntInclusive(1, 6).toString() + ", " + getRandomIntInclusive(2, 20).toString() + " Mins)";
+      $scope.newObj.restless = "Restless: (" + getRandomIntInclusive(1, 6).toString() + ", " + getRandomIntInclusive(2, 20).toString() + " Mins)";
+      $scope.newObj.percent = "Percent Asleep: " + getRandomIntInclusive(65, 100).toString() + "%";
+      $scope.newObj.steps = "Steps: " +  getRandomIntInclusive(1, 12).toString() + "," + getRandomIntInclusive(100, 999).toString();
+      $scope.newObj.calories = "Calories: " + getRandomIntInclusive(1, 3).toString() + "," + getRandomIntInclusive(100, 999).toString();
+      $scope.newObj.stairs = "Stairs: " + getRandomIntInclusive(3, 20).toString() + " Flights";
+      $scope.statisticsArr.push($scope.newObj)
+    }
+  };
+
+  $scope.randomData()
 
 
 });

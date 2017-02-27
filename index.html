@@ -17,7 +17,7 @@
     <!-- Navbar !-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-header" ng-click="changeIndex(0);changeSubIndex(1)">
           <a class="navbar-brand" href="#">
             <span class="glyphicon glyphicon-bed logo"></span>
           </a>
@@ -34,14 +34,14 @@
         <div ng-if = "graphShow" class="col-xs-12">
           <div class = "graphButtons">
             <div class="dateButtons">
-              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(0);changeSubIndex(1)" ng-class="{0:'on', 1:'off', 2:'off'}[index]">Day</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(0);changeSubIndex(1)" ng-class="{0:'on', 1:'off', 2:'off'}[index]">Today</button>
               <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(1)" ng-class="{0:'off', 1:'on', 2:'off'}[index]">Week</button>
               <button type="button" role="button" class="btn btn-info" ng-click="changeIndex(2)" ng-class="{0:'off', 1:'off', 2:'on'}[index]">Month</button>
             </div>
             <div class="qualityButtons">
               <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(1)" ng-class="{0:'off', 1:'on', 2:'off'}[subIndex]" >Quality</button>
-              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(0)" ng-disabled="index==0" ng-class="{0:'on', 1:'off', 2:'off'}[subIndex]">Hours</button>
-              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(2)" ng-disabled="index==0" ng-class="{0:'off', 1:'off', 2:'on'}[subIndex]">Bedtime/Wakeup</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(0)" ng-disabled="index!=1 && index!=2" ng-class="{0:'on', 1:'off', 2:'off'}[subIndex]">Hours</button>
+              <button type="button" role="button" class="btn btn-info" ng-click="changeSubIndex(2)" ng-disabled="index!=1 && index!=2" ng-class="{0:'off', 1:'off', 2:'on'}[subIndex]">Bedtime/Wakeup</button>
             </div>
           </div>
 
@@ -67,16 +67,50 @@
           </div>
           <div class="col-xs-12" style="height:10px"></div>
         </div>
-        <div class="col-xs-12" style="height:5px"></div>
+
+        <div class="col-xs-12" style="height:8px"></div>
+
         <div class="col-xs-8 col-xs-offset-2">
           <button type="button" role="button" class="btn btn-info sleepTipsBtn" ng-show="graphShow" ng-click="graphShow = false;"><span class="glyphicon glyphicon-education tipsGlyph"></span>Sleep Tips</button>
           <button type="button" role="button" class="btn btn-info sleepTipsBtn" ng-show="!graphShow" ng-click="graphShow = true;"><span class="glyphicon glyphicon-stats tipsGlyph"></span>Sleep Graphs</button>
-          <div ng-if="index!=0" class="myTooltip">
-            Hey
-            <span ng-bind="labels[index][0]"></span>
-          </div>
         </div>
 
+        <div class="col-xs-12">
+          <div ng-if="index == 1" ng-click="changeIndex(3);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[0]"></span>
+          </div>
+
+          <div ng-if="index == 1" ng-click="changeIndex(4);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[1]"></span>
+          </div>
+
+          <div ng-if="index == 1" ng-click="changeIndex(5);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[2]"></span>
+          </div>
+
+          <div ng-if="index == 1" ng-click="changeIndex(6);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[3]"></span>
+          </div>
+
+          <div ng-if="index == 1" ng-click="changeIndex(7);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[4]"></span>
+          </div>
+
+          <div ng-if="index == 1" ng-click="changeIndex(8);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[5]"></span>
+          </div>
+
+          <div ng-if="index == 1" ng-click="changeIndex(9);changeSubIndex(1)" class="myTooltip">
+            Hey
+            <span ng-bind="labels[6]"></span>
+          </div>
+        </div>
 
       </div>
 
