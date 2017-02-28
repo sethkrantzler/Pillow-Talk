@@ -8,6 +8,12 @@ app.controller('homeCtrl', function ($scope) {
   $scope.subIndex = 1;
   $scope.dailyGraphs = ['', 'dayQuality.png', ''];
   $scope.weeklyGraphs = ['weekHours.png', 'weekQuality.png', 'bedtimeWeekly.png'];
+  $scope.sundayGraphs = ['', 'dayQuality7.png', ''];
+  $scope.mondayGraphs = ['', 'dayQuality6.png', ''];
+  $scope.tuesdayGraphs = ['', 'dayQuality5.png', ''];
+  $scope.wednesdayGraphs = ['', 'dayQuality4.png', ''];
+  $scope.thursdayGraphs = ['', 'dayQuality3.png', ''];
+  $scope.fridayGraphs = ['', 'dayQuality2.png', ''];
   $scope.monthlyGraphs = ['monthHours.png', 'monthQuality.png', 'bedtimeMonthly.png'];
   $scope.graphArray = [$scope.dailyGraphs, $scope.weeklyGraphs, $scope.monthlyGraphs, $scope.sundayGraphs, $scope.mondayGraphs, $scope.tuesdayGraphs, $scope.wednesdayGraphs, $scope.thursdayGraphs, $scope.fridayGraphs, $scope.dailyGraphs];
   $scope.labels = ["1/21","1/22", "1/23", "1/24", "1/25", "1/26", "1/27"];
