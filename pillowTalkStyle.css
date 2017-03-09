@@ -20,6 +20,7 @@ body{
   color: white;
 }
 .myTooltip:hover span {
+  text-align: center;
   display: block;
   position: relative;
   width: 60px;
@@ -73,15 +74,12 @@ body{
   color: #2bfff3;
 }
 .graphs{
+  background-color: #1e2b35;
+  border-radius: 10px;
   text-align: center;
 }
-.graphs h1{
-  position: relative;
-  top: -480px;
-  margin-bottom: 0px;
-  magin-top: 0px;
-  z-index: 10;
-  font-size: 20px;
+.title{
+  margin-bottom: -15px;
 }
 .sleepTipsBtn{
   width:100%;

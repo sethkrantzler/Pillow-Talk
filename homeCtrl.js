@@ -6,6 +6,7 @@ app.controller('homeCtrl', function ($scope) {
   $scope.graphShow = true;
   $scope.index = 0;
   $scope.subIndex = 1;
+  $scope.titleArray = ["Today ", "January 21st-27th", "January", "January 21st","January 22nd", "January 23rd", "January 24th", "January 25th", "January 26th", "Today"]
   $scope.dailyGraphs = ['', 'dayQuality.png', ''];
   $scope.weeklyGraphs = ['weekHours.png', 'weekQuality.png', 'bedtimeWeekly.png'];
   $scope.sundayGraphs = ['', 'dayQuality7.png', ''];
