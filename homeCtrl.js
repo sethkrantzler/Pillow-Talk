@@ -78,8 +78,8 @@ app.controller('homeCtrl', function ($scope) {
     for (var i = 0; i < 7; i++){
       $scope.newObj = {};
       $scope.newObj.hours =  "Total Hours: " + getRandomIntInclusive(4, 9).toString();
-      $scope.newObj.bedtime = "Bedtime: " + getRandomIntInclusive(8, 12).toString() + ":" + getRandomIntInclusive(0, 60).toString() + " PM";
-      $scope.newObj.wakeup = "Wake Up: " + getRandomIntInclusive(5, 9).toString() + ":" + getRandomIntInclusive(0, 60).toString() + " AM";
+      $scope.newObj.bedtime = "Bedtime: " + getRandomIntInclusive(8, 12).toString() + ":" + getRandomIntInclusive(10, 60).toString() + " PM";
+      $scope.newObj.wakeup = "Wake Up: " + getRandomIntInclusive(5, 9).toString() + ":" + getRandomIntInclusive(10, 60).toString() + " AM";
       $scope.newObj.awake = "Awake: (" + getRandomIntInclusive(1, 6).toString() + ", " + getRandomIntInclusive(2, 20).toString() + " Mins)";
       $scope.newObj.restless = "Restless: (" + getRandomIntInclusive(1, 6).toString() + ", " + getRandomIntInclusive(2, 20).toString() + " Mins)";
       $scope.newObj.percent = "Percent Asleep: " + getRandomIntInclusive(65, 100).toString() + "%";
